@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+ 
+   background-color: #cef3e8;
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+   
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="logo.png" alt="logo" />
+  <h1>Vega Oils</h1>
+</div>
+
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="contact.html">Contact</a>
+  <a href="About.html">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div style="padding-left:16px">
+  
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="Home.html">Home</a>
+  <a href="Hyderabad.html">Hyderabad</a>
+  <a href="Vizag.html">Vizag</a>
+  <a href="Vijayawada.html">Vijayawada</a>
+  <a href="Calculations.html" class="w3-bar-item w3-button">Robot Crawler Calculation</a>
+  </div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ </button>  
+  
+
+<script>
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<br><br>
+<img src="port.jpg" height="80" width="100" align="center" alt="port">
+
+<i><strong><p>With a 33,000-plus work-force, extensive refining, distribution &amp; marketing infrastructure and advanced R&amp;D facilities, Vega Oils plays a significant role in fuelling the socio-economic development of the country. With a mandate to ensure India's energy security and self-sufficiency in refining &amp; marketing of petroleum products, lndianOil has in the past six decades provided energy access to millions of people across the length and breadth of the country through its ever-expanding network of over 47,800 customer touch-points.<br /><br />With a turnover of Rs. 5,06,428 crore and a net profit of Rs. 21,346 crore in 2017-18, and a market capitalisation of 1,71,511 crore, Vega Oils is recognised as one of India's most valuable companies .<br /><br />The Company continues to be the largest contributor to the national exchequer in the form of duties and taxes. During the year 2017-18, Rs. 1,90,670 crore was paid to the exchequer as against Rs. 1,79,014 crore paid in the previous year.&lt;/strong&gt;&lt;/i&gt;</p>
+<div class="mainForMaps" id="googleMap" style="width:85%;height:400px;"></div>
+ 
+<script>
+ 
+ 
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(17.2206315,80.6542347),
+            zoom:5,
+        };
+        var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+        'sandstone rock formation in the southern part of the '+
+        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+        'south west of the nearest large town, Alice Springs; 450&#160;km '+
+        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+        'Aboriginal people of the area. It has many springs, waterholes, '+
+        'rock caves and ancient paintings. Uluru is listed as a World '+
+        'Heritage Site.</p>'+
+        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+        'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+        '(last visited June 22, 2009).</p>'+
+        '</div>'+
+        '</div>';
+        var map =new google.maps.Map(document.getElementById("googleMap"),mapProp);
+ 
+        var marker = new google.maps.Marker({
+            position:{lat:17.4126274,lng:78.2679578},
+            map:map,
+            title:"Hyderabad",
+            icon:"Oilwell3.png",
+            animation: google.maps.Animation.BOUNCE
+        });
+        // var infowindow= new google.maps.InfoWindow ({
+        //     content: "Hyderabad"
+        // });
+        // infowindow.open(map,marker);
+ 
+        var marker = new google.maps.Marker({
+            position:{lat:16.5103177,lng:80.5744204},
+            map:map,
+            icon:"Oilwell2.png",
+            animation: google.maps.Animation.BOUNCE,
+            
+        });
+
+            
+        
+      
+ 
+        var marker = new google.maps.Marker({
+            position:{lat:17.7389495,lng:83.1225035},
+            map:map,
+            icon:"Oilwell1.png",
+            animation: google.maps.Animation.BOUNCE,
+        });
+    }
+ 
+</script>
+ 
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOme7cftIjs3m8G5UfvsxqbkC6fesXgeg&callback=myMap">
+</script>
+<br>
+<br>
+
+
+<p>About us:</p>
+<button class="collapsible">About Our Refiniries </button>
+<div class="content">
+  <p>Vega Oils continues to set up state-of-the-art refineries across the country to meet the growing demand for petroleum products. As on 31st March 2018, the Company owns 11 (including two of its subsidiary) of India's 23 refineries with a combined refining capacity of 80.70 MMTPA, accounting for 33% of domestic refining capacity. 
+
+Vega Oilsprocessed 16 new grades of crude oil during 2017- 18, of which 11 were of US origin, in a continuing bid to expand and diversify its sources for imports. Processing of cheaper, heavy & high-TAN as well as high-sulphur grades of crude oil was stepped up for better refining margins. 
+
+The year 2017-18 marked the commencement of superior BS-VI grade auto fuel supplies from the Company's Mathura and Panipat refineries to the National Capital Territory two years ahead of the scheduled launch across the country by 1st April 2020..</p>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+<br>
+<br>
+
+ <footer>
+<img src="logo.png" height="80" width"80" alt=logo align="left">
+  
+ <address align="center">
+ <small>&copy; Copyright Karan kaushal</small><br>
+Developed&Maintained by <a href="mailto:karankaushal.sd@mmumullana.org">Karan Kaushal</a>.<br> 
+Visit us at<a href="https://www.mmumullana.org">:www.mmumullana.org</a> <br>
+<MARQUEE><p>Follow us on Twitter for more updates:<a href="https://www.twitter.com/karankaushalk"><img src="twitter.png" height="30" width="30" alt="twitter"></a></MARQUEE>
+</address>
+</footer>
+
+</body>
+</html>

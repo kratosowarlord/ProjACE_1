@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Calculations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+   background-image: "port.jpg";
+   background-color: #cef3e8;
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="Home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="Hyderabad.html" class="w3-bar-item w3-button">Hyderabad</a>
+  <a href="Vizag.html" class="w3-bar-item w3-button">Vizag</a>
+  <a href="Vijayawada.html" class="w3-bar-item w3-button">Vijayawada</a>
+    <a href="Calculations.html" class="w3-bar-item w3-button">Robot Crawler Calculation</a>
+  
+  
+</div>
+
+<!-- Page Content -->
+<div >
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+  
+  </div>
+</div>
+
+<div class="header">
+  <img src="logo.png" alt="logo" />
+  <h1>Vega Oils</h1>
+</div>
+<br><br><br>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.width = "30%";
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+
+
+<center>
+<p1><b><font size= 6>Calculation</font size=6></b></p1>
+
+<br>
+<p>Enter the distance</p>
+<br>
+<input type="text" name="Value1" placeholder="Enter Distance in KM." id="test1">
+<button onclick="condition();" >Enter</button>
+<div id="test2"></div>
+<script type="text/javascript">
+   function condition() {
+      
+      var a=document.getElementById("test1").value;
+      
+      if (a >0 && a<=10000) {
+    document.getElementById("test2").innerHTML = "1 Robot and 2 Days Required";
+}
+
+      else if (a >10000 && a<=20000 ) {
+    document.getElementById("test2").innerHTML = "2 Robot and 3 Days Required";
+
+
+}     else if (a >20000 && a<=30000 ) {
+    document.getElementById("test2").innerHTML = "3 Robot and 4 Days Required";
+
+
+}     else if (a >30000 && a<=40000 ) {
+    document.getElementById("test2").innerHTML = "4 Robot and 5 Days Required";
+
+
+}     else if (a >40000 && a<=50000 ) {
+    document.getElementById("test2").innerHTML = "5 Robot and 6 Days Required";
+
+
+}     else if (a >50000 && a<=60000 ) {
+    document.getElementById("test2").innerHTML = "6 Robot and 7 Days Required";
+
+
+}     else if (a >60000 && a<=70000 ) {
+    document.getElementById("test2").innerHTML = "7 Robot and 8 Days Required";
+
+
+}     else if (a >80000 && a<=90000 ) {
+    document.getElementById("test2").innerHTML = "8 Robot and 9 Days Required";
+
+
+}     else if (a >90000 && a<=100000 ) {
+    document.getElementById("test2").innerHTML = "9 Robot and 10 Days Required";
+
+
+}
+     else {
+   document.getElementById("test2").innerHTML = "Enter Valid Input: Numbers only and it should be in range 0-100000 only";
+}
+
+   }
+
+   </script>
+</center>
+<br>
+
+
+<div class="mainForMaps" id="googleMap" style="width:85%;height:400px;"></div>
+ 
+<script>
+ 
+ 
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(17.2206315,80.6542347),
+            zoom:5,
+        };
+        var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+        'sandstone rock formation in the southern part of the '+
+        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+        'south west of the nearest large town, Alice Springs; 450&#160;km '+
+        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+        'Aboriginal people of the area. It has many springs, waterholes, '+
+        'rock caves and ancient paintings. Uluru is listed as a World '+
+        'Heritage Site.</p>'+
+        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+        'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+        '(last visited June 22, 2009).</p>'+
+        '</div>'+
+        '</div>';
+        var map =new google.maps.Map(document.getElementById("googleMap"),mapProp);
+ 
+        var marker = new google.maps.Marker({
+            position:{lat:17.4126274,lng:78.2679578},
+            map:map,
+            title:"Hyderabad",
+            icon:"Oilwell3.png",
+            animation: google.maps.Animation.BOUNCE
+        });
+        // var infowindow= new google.maps.InfoWindow ({
+        //     content: "Hyderabad"
+        // });
+        // infowindow.open(map,marker);
+ 
+        var marker = new google.maps.Marker({
+            position:{lat:16.5103177,lng:80.5744204},
+            map:map,
+            icon:"Oilwell2.png",
+            animation: google.maps.Animation.BOUNCE,
+            
+        });
+
+            
+        
+      
+ 
+        var marker = new google.maps.Marker({
+            position:{lat:17.7389495,lng:83.1225035},
+            map:map,
+            icon:"Oilwell1.png",
+            animation: google.maps.Animation.BOUNCE,
+        });
+    }
+ 
+</script>
+ 
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOme7cftIjs3m8G5UfvsxqbkC6fesXgeg&callback=myMap">
+</script>
+<footer>
+<img src="logo.png" height="80" width"80" alt=logo align="left">
+  
+ <address align="center">
+ <small>&copy; Copyright Karan kaushal</small><br>
+Developed&Maintained by <a href="mailto:karankaushal.sd@mmumullana.org">Karan Kaushal</a>.<br> 
+Visit us at<a href="https://www.mmumullana.org">:www.mmumullana.org</a> <br>
+<MARQUEE><p>Follow us on Twitter for more updates:<a href="https://www.twitter.com/karankaushalk"><img src="twitter.png" height="30" width="30" alt="twitter"></a></MARQUEE>
+</address>
+</footer>
+</body>
+</html>

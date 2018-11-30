@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Prototype Wesbite</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheets/Main.css">
+</head>
+<body>
+
+<div class="sidenav">
+    <a href="HomePage.html">HomePage</a>
+    <a href="Hyderabad.html">Hyderabad</a>
+    <a href="Vijayawada.html">Vijaywada</a>
+    <a href="Vizag.html">Vizag</a>
+</div>
+
+<p class="main" style="text-align:left;">
+    ACE Ltd.
+    <span style="float:right;">ABOUT US CONTACT US</span>
+</p>
+
+<div class="mainForMaps" id="googleMap" style="width:85%;height:400px;"></div>
+
+<script>
+
+
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(17.2206315,80.6542347),
+            zoom:5,
+        };
+        var map =new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker = new google.maps.Marker({
+            position:{lat:17.4126274,lng:78.2679578},
+            map:map,
+            title:"aakash",
+            animation: google.maps.Animation.BOUNCE
+        });
+        // var infowindow= new google.maps.InfoWindow ({
+        //     content: "Aakash"
+        // });
+        // infowindow.open(map,marker);
+
+        var marker = new google.maps.Marker({
+            position:{lat:16.5103177,lng:80.5744204},
+            map:map,
+        });
+
+        var marker = new google.maps.Marker({
+            position:{lat:17.7389495,lng:83.1225035},
+            map:map,
+        });
+    }
+
+</script>
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7P57mjM3GiufAaSn5mzBBzcEZBWsWxHI&callback=myMap">
+</script>
+<br>
+<br>
+<br>
+<form class="mainForFieldsText">
+    First City:<br>
+    <select>
+        <option value="select_city">Select City --</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="Vizag">Vizag</option>
+    </select><br>
+    Second City:<br>
+    <select>
+        <option value="select_city">Select City --</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="Vizag">Vizag</option>
+    </select>
+    <br>
+    <br>
+    <button style="font-size: 15px; padding-left: 15px; padding-right: 5px; padding-top: 5px; padding: 5px">Calculate</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</form>
+
+<hr/>
+
+<!--<div class="bottomDetails">-->
+    <!--<p align="center">COPY RIGHT � DETAILS</p>-->
+    <!--<p align="center">ABOUT US | CONTACT US</p>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<br>-->
+<!--</div>-->
+
+<div class="fixed">
+    <p>COPY RIGHT � DETAILS</p>
+    <p>ABOUT US | CONTACT US</p>
+</div>
+
+</body>
+</html>
